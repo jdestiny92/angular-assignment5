@@ -1,0 +1,12 @@
+<p style="text-align: center;">This is the Sign Up Page</p>
+
+<p style="text-align: center; color:black;"><b><i>Please fill add the following information to sign up for the newsletter!</i></b></p>
+
+<form name="signUpForm" novalidate>
+	<div style="margin-left:40%;">First Name: <input type="text" name="firstName" ng-model="signUp.firstName" required></div>
+	<span ng-if="signUpForm.firstName.$error.required && signUpForm.firstName.$touched" style="color: red; margin-left: 40%">First Name is required</span>
+	<div style="margin-left:40%;">Last Name: <input type="text" name="lastName" ng-model="signUp.lastName" required></div>
+	<div style="margin-left:40%;">Email: <input type="email" name="email" ng-model="signUp.email" required><div>
+	<button ng-disabled="signUpForm.$invalid" ng-click="signUp.go()" style="color:black;">Submit!</button>
+</form>
+
