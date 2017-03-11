@@ -4,11 +4,15 @@
 
 <form name="signUpForm" novalidate>
 	<div style="margin-left:40%;">First Name: <input type="text" name="firstName" ng-model="signUp.firstName" required></div>
-	<span ng-if="signUpForm.firstName.$error.required && signUpForm.firstName.$touched" style="color: red; margin-left: 40%">First Name is required</span>
+		<span ng-if="signUpForm.firstName.$error.required && signUpForm.firstName.$touched" style="color: red; margin-left: 40%">First Name is required</span>
 	<div style="margin-left:40%;">Last Name: <input type="text" name="lastName" ng-model="signUp.lastName" required></div>
+		<span ng-if="signUpForm.lastName.$error.required && signUpForm.lastName.$touched" style="color: red; margin-left: 40%">Last Name is required</span>
 	<div style="margin-left:40%;">Email: <input type="email" name="email" ng-model="signUp.email" required></div>
+		<span ng-if="signUpForm.email.$error.required && signUpForm.email.$touched" style="color: red; margin-left: 40%">Email is required</span>
 	<div style="margin-left:40%;">Phone: <input type="tel" name="phone" ng-model="signUp.phone" required></div>
+		<span ng-if="signUpForm.phone.$error.required && signUpForm.phone.$touched" style="color: red; margin-left: 40%">Phone Number is required</span>
 	<div style="margin-left:40%;">Favorite Menu Item: <select name="menu" ng-model="signUp.menu" required style="color:black;"><option ng-repeat="item in signUp.menuList" style="color:black;">{{item}}</option></select></div>
+		<span ng-if="signUpForm.menu.$error.required && signUpForm.menu.$touched" style="color: red; margin-left: 40%">Menu Item is required</span>
 	<button ng-disabled="signUpForm.$invalid" ng-click="signUp.go()" style="color:black; margin-left:40%;">Submit!</button>
 	<br>
 	<p ng-if="signUp.bool" style="margin-left: 40%; color:green;">Information Saved Succesfully!</p>
