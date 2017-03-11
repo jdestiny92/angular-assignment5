@@ -1,3 +1,15 @@
 <p style="text-align: center;">This is the My Info Page</p>
 
 <p ng-if="!myInfo.status"  style="text-align: center;">Not yet signed up! <a ui-sref="public.sign-up">Sign Up Now!</a></p>
+
+<p ng-if="myInfo.status" style="text-align: center; color:white;">
+	<b><i>Your Account Info:</i></b><br>
+
+	<b>First Name:</b> {{myInfo.data[0]}}<br>
+	<b>Last Name:</b> {{myInfo.data[1]}}<br>
+	<b>Email:</b> {{myInfo.data[2]}}<br>
+	<b>Telephone:</b> {{myInfo.data[3]}}<br>
+	<b>Menu Item Code:</b> {{myInfo.data[4]}}<br>
+	<b>Menu Item Name:</b> {{myInfo.data[5]}}<br>
+	<b>Menu Item Description:</b> {{myInfo.data[6]}}
+</p>

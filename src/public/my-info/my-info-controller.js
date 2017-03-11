@@ -11,7 +11,9 @@ function myInfoController(PublicService) {
 
 	myInfo.status = PublicService.isRegistered;
 
-	
+	myInfo.data = PublicService.userData;
+
+	console.log(myInfo.data);
 }
 
 })();
